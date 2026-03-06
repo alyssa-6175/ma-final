@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/jjw2xxd.css">
+
+    <style>
+        .contact-card {
+            flex: 0 0 600px;
+            /* wider than the hobby boxes for a form look */
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #dbdbdb;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-card label {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-control {
+            border: 1px solid #efefef;
+            background-color: #fafafa;
+            padding: 12px;
+        }
+
+        .form-control:focus {
+            border-color: rgb(223, 207, 255);
+            box-shadow: 0 0 0 0.25rem rgba(223, 207, 255, 0.25);
+        }
+
+        .send-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: rgb(223, 207, 255);
+            /* Your Lavender color */
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .send-btn:hover {
+            background-color: rgb(200, 180, 240);
+            transform: translateY(-2px);
+        }
+
+        /* success Box Centering */
+        .success-box {
+            height: 300px;
+            display: grid;
+            place-items: center;
+            /* perfect centering without flexbox */
+            text-align: center;
+        }
+
+        .success-box p {
+            font-size: 24px;
+            font-weight: 600;
+            color: #4CAF50;
+            margin: 0;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <audio id="bg-music" src="audio/do-the-dance.mp3" autoplay loop></audio>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" id="logo">Alyssa Pan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">NEWS!</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            About Me
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="hobbies.html">Hobbies</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="tenor-gif-embed" data-postid="5786507899478653941" data-share-method="host"
+            data-aspect-ratio="1.76596" data-width="100%"><a
+                href="https://tenor.com/view/spacehey-loading-screen-gif-5786507899478653941">Spacehey Loading Screen
+                GIF</a>from <a href="https://tenor.com/search/spacehey-gifs">Spacehey GIFs</a></div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    </div>
+
+    <div id="content">
+        <div class="container">
+            <div class="header-main">
+                <p>Contact Me</p>
+            </div>
+
+            <div class="contact-card">
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>First Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label>Message</label>
+                        <textarea class="form-control" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="send-btn">Send Message</button>
+                </form>
+
+                <div id="successMessage" class="success-box" style="display: none;">
+                    <p>Message sent!</p>
+                    <small>Maybe I'll respond?</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+</body>
+
+</html>
